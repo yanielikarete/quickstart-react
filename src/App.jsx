@@ -6,7 +6,7 @@ import Vapi from "@vapi-ai/web";
 import { isPublicKeyMissingError } from "./utils";
 
 // Put your Vapi Public Key below.
-const vapi = new Vapi("0000XXXX-XXXX-XXXX-XXXX-XXXXXXXX0000");
+const vapi = new Vapi("a5dfea12-7ced-458c-9d3b-0cff763b44e7");
 
 const App = () => {
   const [connecting, setConnecting] = useState(false);
@@ -99,15 +99,15 @@ const App = () => {
 
 const assistantOptions = {
   name: "Vapi’s Pizza Front Desk",
-  firstMessage: "Vappy’s Pizzeria speaking, how can I help you?",
+  firstMessage: "Hola, somos docucuba en que podemos ayudarlo?",
   transcriber: {
     provider: "deepgram",
     model: "nova-2",
-    language: "en-US",
+    language: "es-MX",
   },
   voice: {
-    provider: "playht",
-    voiceId: "jennifer",
+    provider: "elevenlabs",
+    voiceId: "Antonia",
   },
   model: {
     provider: "openai",
@@ -115,7 +115,7 @@ const assistantOptions = {
     messages: [
       {
         role: "system",
-        content: `You are a voice assistant for Vappy’s Pizzeria, a pizza shop located on the Internet.
+        content: `Hola somo docucuba, estamos aqui para sus documentos. You are a voice assistant for Vappy’s Pizzeria, a pizza shop located on the Internet.
 
 Your job is to take the order of customers calling in. The menu has only 3 types
 of items: pizza, sides, and drinks. There are no other types of items on the menu.
